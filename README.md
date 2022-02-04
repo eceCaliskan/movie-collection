@@ -1,6 +1,7 @@
 # Vue.js movie application
 
 ## Project setup
+toinstall the node modules
 ```
 npm install
 ```
