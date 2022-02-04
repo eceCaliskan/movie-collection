@@ -1,4 +1,4 @@
-# ninja-jobs
+# Vue.js movie application
 
 ## Project setup
 ```
