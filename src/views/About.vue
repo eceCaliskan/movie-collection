@@ -1,5 +1,52 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+ <form  >
+  <label for="fname">Movie Name:</label><br>
+  <input type="text" id="fname" name="fname"  v-model="bname"><br>
+  <label for="lname">Movie Description:</label><br>
+  <input type="text" id="lname" name="lname" v-model="description"><br><br>
+  <input type="submit" value="Submit" v-on:click="addmovie">
+</form> 
+
+
 </template>
+<script>
+export default {
+
+  data(){
+    return{
+  bname: "",
+  description:""
+    }
+  },
+  methods: {
+   
+         async addmovie(){
+
+
+           const m= {
+             id: 3,
+             name: this.bname,
+             description:this.description,
+             director: "director"
+           }
+
+  alert(m)
+  const res = await fetch('http://localhost:5000/movieList',{
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    
+    },
+      body:JSON.stringify(m)
+  })
+  const data = await res.json()
+
+}
+    
+ 
+    
+  },
+ 
+
+}
+</script>
