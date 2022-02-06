@@ -3,7 +3,9 @@
   <label for="fname">Movie Name:</label><br>
   <input type="text" id="fname" name="fname"  v-model="bname"><br>
   <label for="lname">Movie Description:</label><br>
-  <input type="text" id="lname" name="lname" v-model="description"><br><br>
+  <input type="text" id="lname" name="lname" v-model="description"><br>
+  <label for="lname">Movie Director:</label><br>
+  <input type="text" id="lname" name="lname" v-model="director"><br><br>
   <input type="submit" value="Submit" v-on:click="addmovie">
 </form> 
 
@@ -15,7 +17,8 @@ export default {
   data(){
     return{
   bname: "",
-  description:""
+  description:"",
+  director:""
     }
   },
   methods: {
@@ -27,7 +30,7 @@ export default {
              id: Math.floor(Math.random(100)),
              name: this.bname,
              description:this.description,
-             director: "director"
+             director: this.director
            }
 
   alert(m)
