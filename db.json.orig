@@ -1,0 +1,34 @@
+{
+<<<<<<< HEAD
+    "movieList": [{
+            "id": 1,
+            "name": "Midnight in Paris",
+            "description": "While on a trip to Paris with his fiancée's family, a nostalgic screenwriter finds himself mysteriously going back to the 1920s every day at midnight.",
+            "director": "Woody Allen"
+        },
+        {
+            "id": 2,
+            "name": "Inception",
+            "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+            "director": "Christopher Nolan"
+        }
+
+    ]
+}
+=======
+  "movieList": [
+    {
+      "id": 1,
+      "name": "Midnight in Paris",
+      "description": "While on a trip to Paris with his fiancée's family, a nostalgic screenwriter finds himself mysteriously going back to the 1920s every day at midnight.",
+      "director": "Woody Allen"
+    },
+    {
+      "id": 2,
+      "name": "Inception",
+      "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+      "director": "Christopher Nolan"
+    },
+  ]
+}
+>>>>>>> 70c7b32f6519fa77dbb37d7c2e4f15f6998691a5

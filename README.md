@@ -1,6 +1,7 @@
-# ninja-jobs
+# Vue.js movie application
 
 ## Project setup
+ - To install the node modules
 ```
 npm install
 ```
@@ -9,7 +10,10 @@ npm install
 ```
 npm run serve
 ```
-
+### Start the built json server
+```
+npm run backend
+```
 ### Compiles and minifies for production
 ```
 npm run build
