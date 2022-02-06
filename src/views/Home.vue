@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { watch } from '@vue/runtime-core';
 
 
 export default {
@@ -36,9 +37,10 @@ methods: {
   async remove(id){
     const res =  fetch("http://localhost:5000/movieList/"+id,{
     method: 'DELETE',
- })
-    console.log("http://localhost:5000/movieList/"+id);
-    this.movieList = await this.fetchTasks()
+ }.this.fetchTasks())
+   
+ 
+  
 },
 
 async fetchTasks() {
@@ -50,14 +52,14 @@ async fetchTasks() {
 },
 
 },
-async created()
+ async created()
 {
      
-     this.movieList = await this.fetchTasks()
+     this.movieList =  await this.fetchTasks()
      if(this.movieList.length===0){
        alert("Your movie list is empty")
      }
-}
+},
 
 }
 </script>

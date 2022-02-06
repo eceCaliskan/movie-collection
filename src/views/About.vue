@@ -24,7 +24,7 @@ export default {
 
 
            const m= {
-             id: 3,
+             id: Math.floor(Math.random(100)),
              name: this.bname,
              description:this.description,
              director: "director"
