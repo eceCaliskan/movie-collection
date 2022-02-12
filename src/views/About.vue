@@ -1,10 +1,10 @@
 <template>
  <form  >
-  <label for="fname">Movie Name:</label><br>
+  <label for="fname">Movie Name</label><br>
   <input type="text" id="fname" name="fname"  v-model="bname"><br>
-  <label for="lname">Movie Description:</label><br>
+  <label for="lname">Movie Description</label><br>
   <input type="text" id="lname" name="lname" v-model="description"><br>
-  <label for="lname">Movie Director:</label><br>
+  <label for="lname">Movie Director</label><br>
   <input type="text" id="lname" name="lname" v-model="director"><br><br>
   <input type="submit" value="Submit" v-on:click="addmovie">
 </form> 
@@ -53,3 +53,11 @@ export default {
 
 }
 </script>
+<style scoped>
+form{
+  background-color: aqua;
+  margin: 100px;
+   background-color: aliceblue;
+   padding: 50px;
+}
+</style>

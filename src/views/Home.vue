@@ -1,18 +1,23 @@
 <template>
 <div id="ok">
-    <h1><i>Movie Collection</i></h1>
+    <h1>Movie Collection</h1>
 </div>
+
  <li v-for="movie in movieList" :key="movie.id">
+   <div id="cart">
    <!--img  v-if="movie.id==1" src='@/assets/midnight.jpg' >
  <img  v-if="movie.id==2" src='@/assets/inception.jpg' -->
 
-<h4>{{movie.name}}</h4>
+<h2>{{movie.name}}</h2>
 <p>{{movie.description}}</p>
-<p>{{movie.director}}</p>
+<b><p>{{movie.director}}</p></b>
 
 <button class="button-81" v-on:click="remove(movie.id)">Remove</button>
  <hr style="width:80%;text-align:center;">
+
+  </div>
  </li>
+
 <About @addmovie="addmovie"/>
 <!--button class="button-81" v-on:click="index -=1">Back</button>
 
@@ -75,20 +80,26 @@ li{
   list-style: none;
 }
 
-h4{
-  color: green;
+h2{
+  color: rgb(110, 161, 219);
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 8vh;
   margin-left: 100px;
   margin-right: 100px;
   
+}
+
+#cart{
+  background-color: aliceblue;
+  margin-right: 100px;
+   margin-left: 100px;
+     margin-bottom: 50px;
 }
 
 div{
