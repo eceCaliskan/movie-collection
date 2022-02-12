@@ -28,7 +28,7 @@ export default {
   name: 'App',
   data() {
     return{
-    
+     
     movieList: []
     
   }
@@ -37,8 +37,9 @@ methods: {
   async remove(id){
     const res =  fetch("http://localhost:5000/movieList/"+id,{
     method: 'DELETE',
- }.this.fetchTasks())
-   
+ })
+ //refreshing the page
+   this.$router.go()
  
   
 },
