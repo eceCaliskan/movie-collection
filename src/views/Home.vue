@@ -1,33 +1,21 @@
 <template>
 <div id="ok">
     <h1>Movie Collection</h1>
+    <p><b>You have {{size}} movies in your collection</b></p>
 </div>
-
  <li v-for="movie in movieList" :key="movie.id">
    <div id="cart">
-   <!--img  v-if="movie.id==1" src='@/assets/midnight.jpg' >
- <img  v-if="movie.id==2" src='@/assets/inception.jpg' -->
-
-<h2>{{movie.name}}</h2>
-<p>{{movie.description}}</p>
-<b><p>{{movie.director}}</p></b>
-
-<button class="button-81" v-on:click="remove(movie.id)">Remove</button>
- <hr style="width:80%;text-align:center;">
-
-  </div>
+       <h2>{{movie.name}}</h2>
+       <p>{{movie.description}}</p>
+       <b><p>{{movie.director}}</p></b>
+       <button class="button-81" v-on:click="remove(movie.id)">Remove</button>
+       <hr style="width:80%;text-align:center;">
+   </div>
  </li>
-
-<About @addmovie="addmovie"/>
-<!--button class="button-81" v-on:click="index -=1">Back</button>
-
-<button class="button-81" v-on:click="index +=1">Next</button-->
 </template>
 
 <script>
 import { watch } from '@vue/runtime-core';
-
-
 export default {
   
   name: 'App',
@@ -39,10 +27,10 @@ export default {
   }
 },
 methods: {
-  async remove(id){
-    const res =  fetch("http://localhost:5000/movieList/"+id,{
-    method: 'DELETE',
- })
+       async remove(id){
+         const res =  fetch("http://localhost:5000/movieList/"+id,{
+         method: 'DELETE',
+     })
  //refreshing the page
    this.$router.go()
  
@@ -66,6 +54,14 @@ async fetchTasks() {
        alert("Your movie list is empty")
      }
 },
+
+computed: {
+  size(){
+    return this.movieList.length;
+  }
+
+}
+
 
 }
 </script>
