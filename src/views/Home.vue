@@ -8,17 +8,22 @@
        <h2>{{movie.name}}</h2>
        <p>{{movie.description}}</p>
        <b><p>{{movie.director}}</p></b>
-       <button class="button-81" v-on:click="remove(movie.id)">Remove</button>
+    <Button @remove='remove(movie.id)'/>
        <hr style="width:80%;text-align:center;">
    </div>
  </li>
 </template>
 
 <script>
+import Button from '/src/components/Button'
+
 import { watch } from '@vue/runtime-core';
 export default {
   
   name: 'App',
+  components: {
+    Button
+  },
   data() {
     return{
      
@@ -28,6 +33,7 @@ export default {
 },
 methods: {
        async remove(id){
+         alert("ok");
          const res =  fetch("http://localhost:5000/movieList/"+id,{
          method: 'DELETE',
      })
@@ -104,50 +110,11 @@ div{
   background-color: #fff;
 }
 
-  
-@media screen and (max-width: 992px) {
-  img {
-   width: 200px;
-  }
-}
-
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (min-width: 600px) {
-  img {
-   width: 300px;
-  }
-}
-
-
-
-#back{
-  margin-right: 100px;
- 
-}
-#next{
-  margin-left: 100px;
-}
-
 p{
   margin-left: 100px;
 margin-right: 100px;
 }
 
-button{
-  background-color: #fff;
-  border-color:white;
-  border-radius: 10px;
-  min-width: 20%;
-  padding-top: 1%;
-  padding-bottom:  1%;
-  
-
-}
-
-button:hover{
-  background-color:rgb(238, 80, 80);
-  color: white;
-}
 /* CSS */
 
 </style>
