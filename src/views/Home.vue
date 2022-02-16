@@ -6,26 +6,23 @@
 		</p>
 	</div>
 	<li v-for="movie in movieList" :key="movie.id">
-		<div id="cart">
-			<h2>{{ movie.name }}</h2>
-			<p>{{ movie.description }}</p>
-			<b><p>{{ movie.director }}</p></b>
-			<Button @remove="remove(movie.id)" />
+		<div id="cart">	
+			<Movie v-on:remove="remove(movie.id)" :movie="movie"/>
 			<hr style="width:80%;text-align:center;" />
 		</div>
 	</li>
 </template>
 
 <script>
-import Button from "/src/components/Button";
 import Header from "/src/components/Header";
+import Movie from "/src/components/Movie";
 
 import { watch } from "@vue/runtime-core";
 export default {
 	name: "App",
 	components: {
-		Button,
-		Header
+		Header,
+    Movie
 	},
 	data() {
 		return {
