@@ -1,6 +1,6 @@
 <template>
 <div id="ok">
-    <h1>Movie Collection</h1>
+   <Header />
     <p><b>You have {{size}} movies in your collection</b></p>
 </div>
  <li v-for="movie in movieList" :key="movie.id">
@@ -16,13 +16,15 @@
 
 <script>
 import Button from '/src/components/Button'
+import Header from '/src/components/Header'
 
 import { watch } from '@vue/runtime-core';
 export default {
   
   name: 'App',
   components: {
-    Button
+    Button,
+    Header
   },
   data() {
     return{
