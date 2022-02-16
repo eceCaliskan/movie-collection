@@ -15,3 +15,10 @@ export default {
 }
 </script>
 
+<style scoped>
+h1{
+	font-size: 50px;
+	font-weight: normal;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+</style>

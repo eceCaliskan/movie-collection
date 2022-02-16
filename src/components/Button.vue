@@ -5,12 +5,12 @@
 <style>
 button{
   background-color: #fff;
-  border-color:white;
+  border-color:black;
   border-radius: 10px;
   min-width: 20%;
   padding-top: 1%;
   padding-bottom:  1%;
-  
+  border-width: 1px;
 
 }
 

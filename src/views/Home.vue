@@ -8,7 +8,7 @@
 	<li v-for="movie in movieList" :key="movie.id">
 		<div id="cart">	
 			<Movie v-on:remove="remove(movie.id)" :movie="movie"/>
-			<hr style="width:80%;text-align:center;" />
+		
 		</div>
 	</li>
 </template>
@@ -72,6 +72,7 @@ li {
 
 h2 {
 	color: rgb(110, 161, 219);
+
 }
 
 #app {
@@ -85,10 +86,15 @@ h2 {
 }
 
 #cart {
-	background-color: aliceblue;
+	background-color: white;
 	margin-right: 100px;
 	margin-left: 100px;
 	margin-bottom: 50px;
+	padding-bottom: 20px;
+	border-style: solid;
+	border-width: 1px;
+  border-color: rgb(179, 179, 179);
+  border-radius: 20px;
 }
 
 div {
